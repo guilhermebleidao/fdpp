@@ -19,8 +19,8 @@ void *slave (void *nenhum)
 		pthread_mutex_lock(&mutex1); // Acesso atomico: a primeira thread a chamar essa funcao nao concorre com outras threads
 		local_index = global_index;
 		global_index++;
-		pthread_mutex_unlock(&mutex1);
 		// Desbloqueando execucao do codigo
+		pthread_mutex_unlock(&mutex1);
 
 		if (local_index < TAM)
 		{
